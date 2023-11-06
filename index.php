@@ -162,7 +162,7 @@
                          and Password reset instructions would be sent to the registered email address</p>
                     <form action="#" method="post" class="px-3" id="forgot-form">
                         <div id="forgotAlert">
-
+                            
                         </div>
          <div class="input-group input-group-lg form-group">
              <div class="input-group-prepend">

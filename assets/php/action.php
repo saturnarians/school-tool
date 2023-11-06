@@ -74,8 +74,8 @@ if(isset($_POST['action']) && $_POST['action'] == 'register'){
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = "omosuwaolasunkanmi@gmail.com";
-        $mail->Password = "Ijeoma83!";
+        $mail->Username =Database::USERNAME;
+        $mail->Password = Database::PASSWORD;
     
         $mail->SMTPSecure =  PHPMailer::ENCRYPTION_STARTTLS;
         $mail->port = 587;
@@ -85,8 +85,7 @@ if(isset($_POST['action']) && $_POST['action'] == 'register'){
         $mail->isHTML(true);
         $mail->Subject = 'Reset Password';
         $mail->Body = '<h3>Click the link below to reset your Password.
-         <br> <a href="http://localhost/user-area/reset-pass.php?email='
-         .$email.'&token='.$token.'">
+         <br> <a href="http://localhost/user-area/reset-pass.php?email='.$email.'&token='.$token.'">
           http://localhost/user-area/reset-pass.php?email='
           .$email.'&token='.$token.'</a><br>Regards<br>Kanmiragi</h3>';
         $mail->send();
