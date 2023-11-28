@@ -1,13 +1,25 @@
 <?php
-session_start();
+
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+session_start();
+
+
+require './vendor/phpmailer/phpmailer/Exception.php';
+require './vendor/phpmailer/phpmailer/PHPMailer.php';
+
+require './vendor/phpmailer/phpmailer/smtp.php';
+
+
 //Load Composer's autoloader
 require 'vendor/autoload.php';
+
+
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
